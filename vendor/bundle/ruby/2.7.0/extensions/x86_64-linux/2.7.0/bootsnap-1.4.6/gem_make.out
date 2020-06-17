@@ -1,0 +1,41 @@
+current directory: /home/vagrant/work/todoapp/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.6/ext/bootsnap
+/home/vagrant/.rbenv/versions/2.7.1/bin/ruby -I /home/vagrant/.rbenv/versions/2.7.1/lib/ruby/site_ruby/2.7.0 -r ./siteconf20200617-23096-2wrhty.rb extconf.rb
+creating Makefile
+
+current directory: /home/vagrant/work/todoapp/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.6/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /home/vagrant/work/todoapp/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.6/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+bootsnap.c: 関数 ‘bs_cache_path’ 内:
+bootsnap.c:272:3: 警告: 書式 ‘%llx’ は引数の型が ‘long long unsigned int’ であると予期されますが、第 5 引数の型は ‘uint64_t’ です [-Wformat=]
+   sprintf(*cache_path, "%s/%02x/%014llx", cachedir, first_byte, remainder);
+   ^
+bootsnap.c: 関数 ‘prot_input_to_storage’ 内:
+bootsnap.c:815:7: 警告: 互換性のないポインタ型から 3 番目の ‘rb_rescue2’ の引数に渡しています [デフォルトで有効]
+       rb_eBootsnap_CompileCache_Uncompilable, 0);
+       ^
+In file included from /home/vagrant/.rbenv/versions/2.7.1/include/ruby-2.7.0/ruby.h:33:0,
+                 from bootsnap.c:15:
+/home/vagrant/.rbenv/versions/2.7.1/include/ruby-2.7.0/ruby/ruby.h:1988:7: 備考: expected ‘VALUE (*)(VALUE,  VALUE)’ but argument is of type ‘VALUE (*)(VALUE)’
+ VALUE rb_rescue2(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE,VALUE),VALUE,...);
+       ^
+bootsnap.c: 関数 ‘bs_rb_fetch’ 内:
+bootsnap.c:657:13: 警告: ‘output_data’ はこの関数内初期化されずに使用されるかもしれません [-Wmaybe-uninitialized]
+     else if (!NIL_P(output_data))             goto succeed; /* fast-path, goal */
+             ^
+bootsnap.c:628:9: 備考: ‘output_data’ はここで定義されています
+   VALUE output_data;  /* return data, e.g. ruby hash or loaded iseq */
+         ^
+bootsnap.c: トップレベル:
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-tautological-compare" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-self-assign" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-parentheses-equality" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-constant-logical-operand" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-cast-function-type" です [デフォルトで有効]
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/vagrant/work/todoapp/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.6/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20200617-23096-2lm1f3/bootsnap
